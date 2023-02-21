@@ -13,7 +13,7 @@
 	"author": "AndreyShyshkin",
 	"license": "MIT",
 	"scripts": {
-		"start": "webpack serve --config config/webpack.dev.js",
+		"start": "webpack serve --config=config/webpack.dev.js --open",
 		"build": "webpack --config config/webpack.prod.js",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint src/**/*.js",
