@@ -6,6 +6,7 @@ const environment = require('./environment')
 module.exports = {
 	entry: {
 		main: './src/index.scripts.js',
+		styles: './src/index.styles.scss',
 	},
 	output: {
 		filename: 'js/[name].[contenthash].js',
