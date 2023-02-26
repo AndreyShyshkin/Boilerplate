@@ -6,7 +6,7 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
 
   ### PreInstall
 
-Install [Node.js](https://nodejs.org/).
+Install [Node.js](https://nodejs.org/).<br/>
 Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
 
   ### Install boilerplate
