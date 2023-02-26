@@ -6,8 +6,8 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
 
   ### PreInstall
 
-Install [Node.js](https://nodejs.org/).<br/>
-Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
+ - Install [Node.js](https://nodejs.org/).<br/>
+ - Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
 
   ### Install boilerplate
 
@@ -52,13 +52,13 @@ import './analytics.js';
 ```
 
 ## Why use this build?
-Uses the latest version of Webpack and Babel<br/>
-Integrated ESLint and Prettier to maintain the codebase<br/>
-Integrated TailwindCSS to quickly create a UI<br/>
-Integrated PostCSS with Autoprefixer to automatically add vendor prefixes<br/>
-Integrated Husky for easy use with git hooks<br/>
-Support for assembling images, fonts, and other static resources<br/>
-Ability to easily add new pages, styles and scripts<br/>
+ - Uses the latest version of Webpack and Babel<br/>
+ - Integrated ESLint and Prettier to maintain the codebase<br/>
+ - Integrated TailwindCSS to quickly create a UI<br/>
+ - Integrated PostCSS with Autoprefixer to automatically add vendor prefixes<br/>
+ - Integrated Husky for easy use with git hooks<br/>
+ - Support for assembling images, fonts, and other static resources<br/>
+ - Ability to easily add new pages, styles and scripts<br/>
 
 It is recommended to use the pnpm package manager as it is faster and uses less disk space compared to npm and yarn.<br/>
 
