@@ -1,4 +1,4 @@
-# My App
+# Boilerplate
 
 This is a starter kit for building web applications using Webpack, Babel, ESLint, Prettier, PostCSS, SCSS, Husky, jQuery, and Tailwind.
 
@@ -31,8 +31,8 @@ Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
     pnpm run build
    The bundle will be created in the dist directory.
 
-##Additional work
-###Adding new pages
+## Additional work
+### Adding new pages
 To add a new page, you need to create a new .html file in the src/app/pages directory and specify the path to it in the appropriate entry point in webpack.common.js. For example, if you created an about.html file, in webpack.common.js you need to add:
 ```bash
 entry: {
@@ -40,18 +40,18 @@ entry: {
   about: './src/app/pages/about.html',
 },
 ```
-###Adding new styles
+### Adding new styles
 To add new styles, you need to create a new .scss file in the src/app/styles directory and import it into index.styles.scss. For example, if you created a buttons.scss file, you would add the following to index.styles.scss:
 ```bash
 @import 'buttons';
 ```
-###Adding new scripts
+### Adding new scripts
 To add new scripts, you need to create a new .js file in the src/app/scripts directory and import it into index.scripts.js. For example, if you created an analytics.js file, in index.scripts.js you need to add:
 ```bash
 import './analytics.js';
 ```
 
-##Why use this build?
+## Why use this build?
 Uses the latest version of Webpack and Babel<br/>
 Integrated ESLint and Prettier to maintain the codebase<br/>
 Integrated TailwindCSS to quickly create a UI<br/>
