@@ -11,31 +11,25 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
 
   ### Install boilerplate
 
-    ```bash
     git clone https://github.com/your-username/your-project.git
     cd your-project
     pnpm install
-    ```
 
 ## Usage
   
   ###Launching
-    To run the project in development mode, run the command:
+   To run the project in development mode, run the command:
 
-    ```bash
     pnpm start
-    ```
-
-    The application will be available at http://localhost:9000.
+    
+   The application will be available at http://localhost:9000.
 
 
   ###Assembly
     To create a bundle in production mode, run the command:
 
-    ```bash
     pnpm run build
-    ```
-    The bundle will be created in the dist directory.
+   The bundle will be created in the dist directory.
 
 ##Additional work
 ###Adding new pages
