@@ -2,6 +2,8 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const environment = require('./environment')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
 
 module.exports = {
 	entry: {
@@ -9,7 +11,7 @@ module.exports = {
 		styles: './src/index.styles.scss',
 	},
 	output: {
-		filename: 'js/[name].[contenthash].js',
+		filename: 'js/[name].bundle.js',
 		path: path.resolve(__dirname, '../dist'),
 		clean: true,
 	},
@@ -56,14 +58,42 @@ module.exports = {
 					},
 				],
 			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-inline-loader',
+			},
 		],
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'css/[name].[contenthash].css',
+			filename: '[name].[contenthash].css',
+			chunkFilename: '[id].[contenthash].css',
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/index.html',
+			title: 'Boilerplate',
+			favicon: 'src/app/images/favicon.ico',
+			template: 'src/index.html',
+			minify: true,
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: 'src/app/images', to: 'images' },
+				{ from: 'src/app/fonts', to: 'fonts' },
+			],
+		}),
+		new ImageminWebpWebpackPlugin({
+			config: [
+				{
+					test: /\.(jpe?g|png)/,
+					options: {
+						quality: 75,
+					},
+				},
+			],
+			overrideExtension: true,
+			detailedLogs: false,
+			silent: false,
+			strict: true,
 		}),
 	],
 }
