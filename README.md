@@ -52,14 +52,14 @@ import './analytics.js';
 ```
 
 ##Why use this build?
-Uses the latest version of Webpack and Babel
-Integrated ESLint and Prettier to maintain the codebase
-Integrated TailwindCSS to quickly create a UI
-Integrated PostCSS with Autoprefixer to automatically add vendor prefixes
-Integrated Husky for easy use with git hooks
-Support for assembling images, fonts, and other static resources
-Ability to easily add new pages, styles and scripts
+Uses the latest version of Webpack and Babel<br/>
+Integrated ESLint and Prettier to maintain the codebase<br/>
+Integrated TailwindCSS to quickly create a UI<br/>
+Integrated PostCSS with Autoprefixer to automatically add vendor prefixes<br/>
+Integrated Husky for easy use with git hooks<br/>
+Support for assembling images, fonts, and other static resources<br/>
+Ability to easily add new pages, styles and scripts<br/>
 
-It is recommended to use the pnpm package manager as it is faster and uses less disk space compared to npm and yarn.
+It is recommended to use the pnpm package manager as it is faster and uses less disk space compared to npm and yarn.<br/>
 
 We hope this build
