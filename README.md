@@ -4,40 +4,68 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
 
 ## Installation
 
-1. Clone this repository.
-2. Install [Node.js](https://nodejs.org/).
-3. Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
-4. Install dependencies with the command `pnpm install`.
+  ### PreInstall
+
+    Install [Node.js](https://nodejs.org/).
+    Install [PNPM](https://pnpm.io/) with the command `npm install -g pnpm`.
+
+  ### Install boilerplate
+
+    ```bash
+    git clone https://github.com/your-username/your-project.git
+    cd your-project
+    pnpm install
+    ```
 
 ## Usage
+  
+  ###Launching
+    To run the project in development mode, run the command:
 
-- `pnpm start`: Start the development server.
-- `pnpm run build`: Build the production version.
-- `pnpm run lint`: Lint your code.
-- `pnpm run format`: Format your code with Prettier.
+    ```bash
+    pnpm start
+    ```
 
-## Features
+    The application will be available at http://localhost:9000.
 
-- Webpack for bundling and serving the application.
-- Babel for transpiling modern JavaScript to ES5.
-- ESLint with the [Airbnb style guide](https://github.com/airbnb/javascript) for code linting.
-- Prettier for code formatting.
-- PostCSS with Autoprefixer for CSS processing.
-- SCSS for styling.
-- Husky and lint-staged for code quality assurance.
-- jQuery for DOM manipulation.
-- Tailwind for utility-first CSS.
 
-## How to Customize
+  ###Assembly
+    To create a bundle in production mode, run the command:
 
-1. Customize the `tailwind.config.js` file to add your own Tailwind classes.
-2. Customize the `postcss.config.js` file to add your own PostCSS plugins.
-3. Add your own dependencies to `package.json`.
+    ```bash
+    pnpm run build
+    ```
+    The bundle will be created in the dist directory.
 
-## Why Use PNPM
+##Additional work
+###Adding new pages
+To add a new page, you need to create a new .html file in the src/app/pages directory and specify the path to it in the appropriate entry point in webpack.common.js. For example, if you created an about.html file, in webpack.common.js you need to add:
+```bash
+entry: {
+  index: './src/index.js',
+  about: './src/app/pages/about.html',
+},
+```
+###Adding new styles
+To add new styles, you need to create a new .scss file in the src/app/styles directory and import it into index.styles.scss. For example, if you created a buttons.scss file, you would add the following to index.styles.scss:
+```bash
+@import 'buttons';
+```
+###Adding new scripts
+To add new scripts, you need to create a new .js file in the src/app/scripts directory and import it into index.scripts.js. For example, if you created an analytics.js file, in index.scripts.js you need to add:
+```bash
+import './analytics.js';
+```
 
-This starter kit recommends using PNPM for package management. PNPM is a faster and more efficient alternative to NPM or Yarn. It uses a global store of dependencies to save disk space and reduce installation time. PNPM also allows you to install multiple versions of the same package and share them across projects. To learn more about PNPM, visit the [official website](https://pnpm.io/).
+##Why use this build?
+Uses the latest version of Webpack and Babel
+Integrated ESLint and Prettier to maintain the codebase
+Integrated TailwindCSS to quickly create a UI
+Integrated PostCSS with Autoprefixer to automatically add vendor prefixes
+Integrated Husky for easy use with git hooks
+Support for assembling images, fonts, and other static resources
+Ability to easily add new pages, styles and scripts
 
-## Conclusion
+It is recommended to use the pnpm package manager as it is faster and uses less disk space compared to npm and yarn.
 
-This starter kit provides a solid foundation for building web applications with modern tools and technologies. It is highly customizable and can be adapted to suit any project's needs. Use PNPM to speed up installation and make package management more efficient.
+We hope this build
