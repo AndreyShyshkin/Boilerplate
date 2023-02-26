@@ -2,17 +2,14 @@
 	"name": "Basic-boilerplate",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"start": "webpack serve --config config/webpack.dev.js --mode development",
 		"build": "webpack --config config/webpack.prod.js --mode production",
 		"lint": "eslint src",
 		"lint:fix": "eslint src --fix",
-		"prettier": "prettier --write .",
-		"postcss": "postcss src/index.styles.scss -o dist/css/styles.css",
-		"watch:postcss": "postcss src/index.styles.scss -o dist/css/styles.css --watch",
-		"husky": "husky install",
-		"prepare": "husky install"
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+		"postcss": "postcss src/index.styles.scss -o dist/css/styles.css --config postcss.config.js",
+		"watch:postcss": "postcss src/index.styles.scss -o dist/css/styles.css --watch --no-map"
 	},
 	"husky": {
 		"hooks": {
@@ -21,7 +18,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/AndreyShyshkin/Boilerplate/edit/Basic-boilerplate.git"
+		"url": "https://github.com/AndreyShyshkin/Boilerplate/tree/Basic-boilerplate.git"
 	},
 	"author": "AdreyShyshkin",
 	"license": "MIT",
@@ -30,8 +27,7 @@
 	},
 	"homepage": "https://github.com/AndreyShyshkin/Boilerplate/edit/Basic-boilerplate",
 	"dependencies": {
-		"jquery": "^3.6.3",
-		"tailwindcss": "^3.2.7"
+		"jquery": "^3.6.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.21.0",
@@ -39,17 +35,16 @@
 		"@babel/preset-react": "^7.18.6",
 		"autoprefixer": "^10.4.13",
 		"babel-loader": "^9.1.2",
+		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.7.3",
 		"eslint": "^8.35.0",
-		"eslint-config-airbnb": "^19.0.4",
 		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-react": "^7.32.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
 		"file-loader": "^6.2.0",
 		"html-webpack-plugin": "^5.5.0",
 		"husky": "^8.0.3",
 		"image-webpack-loader": "^8.1.0",
+		"imagemin-webp-webpack-plugin": "^3.3.6",
 		"mini-css-extract-plugin": "^2.7.2",
 		"path": "^0.12.7",
 		"postcss": "^8.4.21",
@@ -58,7 +53,8 @@
 		"sass": "^1.58.3",
 		"sass-loader": "^13.2.0",
 		"style-loader": "^3.3.1",
-		"tailwindcss": "^3.0.5",
+		"svg-inline-loader": "^0.8.2",
+		"tailwindcss": "^3.2.7",
 		"terser-webpack-plugin": "^5.3.6",
 		"webpack": "^5.75.0",
 		"webpack-cli": "^5.0.1",
@@ -74,6 +70,6 @@
 	"browserslist": [
 		"last 2 versions",
 		"> 1%",
-		"not ie <= 11"
+		"not dead"
 	]
 }
