@@ -15,6 +15,19 @@ module.exports = {
 		path: path.resolve(__dirname, '../dist'),
 		clean: true,
 	},
+	target: 'web',
+	cache: {
+		type: 'filesystem',
+	},
+	cache: {
+	    type: 'memory'
+	  },
+	optimization: {
+	    splitChunks: {
+	      chunks: 'all',
+	      name: false
+	    }
+	  },
 	module: {
 		rules: [
 			{
@@ -96,8 +109,4 @@ module.exports = {
 			strict: true,
 		}),
 	],
-	target: 'web',
-	cache: {
-		type: 'filesystem',
-	},
 }
