@@ -3,14 +3,14 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"start": "webpack serve --config config/webpack.dev.js --mode development --hot",
+		"start": "webpack serve --config config/webpack.dev.js --mode development --hot --port",
 		"build": "webpack --config config/webpack.prod.js --mode production",
 		"lint": "eslint src",
 		"lint:all": "eslint .",
 		"lint:fix": "eslint src --fix",
 		"format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json}'",
 		"postcss:build": "postcss src/index.styles.scss -o dist/app/css/styles.css --config postcss.config.js",
-		"postcss:watch": "postcss src/index.styles.scss -o dist/app/css/styles.css --watch --no-map",
+		"postcss:watch": "postcss src/index.styles.scss -o dist/app/css/styles.css --watch --no-map --port",
 		"pre-commit:lint": "npm run lint:fix",
 		"pre-commit:format": "npm run format",
 		"pre-commit:postcss": "npm run postcss:build -- --no-source"
@@ -30,9 +30,6 @@
 		"url": "https://github.com/AndreyShyshkin/Boilerplate/issues"
 	},
 	"homepage": "https://github.com/AndreyShyshkin/Boilerplate/edit/Basic-boilerplate",
-	"dependencies": {
-		"jquery": "^3.6.3"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.16.7",
 		"@babel/preset-env": "^7.16.5",
