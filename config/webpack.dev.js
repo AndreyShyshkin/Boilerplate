@@ -15,5 +15,10 @@ module.exports = merge(common, {
 		watchFiles: [path.join(__dirname, '../src/**/*')],
 		open: 'index.html',
 	},
+	watchOptions: {
+		ignored: /node_modules/,
+		aggregateTimeout: 300,
+		poll: 1000,
+	},
 	plugins: [new webpack.HotModuleReplacementPlugin()],
 })
