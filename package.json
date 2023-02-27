@@ -30,9 +30,6 @@
 		"url": "https://github.com/AndreyShyshkin/Boilerplate/issues"
 	},
 	"homepage": "https://github.com/AndreyShyshkin/Boilerplate/edit/Basic-boilerplate",
-	"dependencies": {
-		"react": "^18.2.0"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.16.7",
 		"@babel/preset-env": "^7.16.5",
