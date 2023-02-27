@@ -30,6 +30,9 @@
 		"url": "https://github.com/AndreyShyshkin/Boilerplate/issues"
 	},
 	"homepage": "https://github.com/AndreyShyshkin/Boilerplate/edit/Basic-boilerplate",
+	"dependencies": {
+		"react": "^18.2.0"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.16.7",
 		"@babel/preset-env": "^7.16.5",
@@ -43,7 +46,10 @@
 		"css-minimizer-webpack-plugin": "^4.2.2",
 		"eslint": "^8.9.0",
 		"eslint-config-airbnb": "^19.0.3",
+		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-jsx-a11y": "^6.7.1",
+		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.28.0",
 		"eslint-plugin-react-hooks": "^4.3.0",
 		"file-loader": "^6.2.0",
@@ -55,7 +61,7 @@
 		"mini-css-extract-plugin": "^2.4.3",
 		"postcss": "^8.4.5",
 		"postcss-loader": "^6.2.1",
-		"prettier": "^2.4.1",
+		"prettier": "^2.8.4",
 		"sass": "^1.42.1",
 		"sass-loader": "^12.4.0",
 		"style-loader": "^3.3.1",
