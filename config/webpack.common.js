@@ -11,7 +11,7 @@ module.exports = {
 		styles: './src/index.styles.scss',
 	},
 	output: {
-		filename: 'js/[name].bundle.js',
+		filename: 'app/js/[name].[contenthash].js',
 		path: path.resolve(__dirname, '../dist'),
 		clean: true,
 	},
@@ -47,7 +47,7 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: '[name].[hash].[ext]',
-							outputPath: 'image',
+							outputPath: 'images',
 						},
 					},
 					{
@@ -66,8 +66,8 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
-			chunkFilename: '[id].[contenthash].css',
+			filename: 'app/css/[name].[contenthash].css',
+			chunkFilename: 'app/css/[id].[contenthash].css',
 		}),
 		new HtmlWebpackPlugin({
 			title: 'Boilerplate',
@@ -77,8 +77,8 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
-				{ from: 'src/app/images', to: 'images' },
-				{ from: 'src/app/fonts', to: 'fonts' },
+				{ from: 'src/app/images', to: 'app/images' },
+				{ from: 'src/app/fonts', to: 'app/fonts' },
 			],
 		}),
 		new ImageminWebpWebpackPlugin({
@@ -96,4 +96,8 @@ module.exports = {
 			strict: true,
 		}),
 	],
+	target: 'web',
+	cache: {
+		type: 'filesystem',
+	},
 }
