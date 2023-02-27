@@ -17,7 +17,7 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
 
 ## Usage
   
-  ###Launching
+  ### Launching
    To run the project in development mode, run the command:
 
     pnpm start
@@ -25,7 +25,7 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
    The application will be available at http://localhost:9000.
 
 
-  ###Assembly
+  ### Assembly
     To create a bundle in production mode, run the command:
 
     pnpm run build
