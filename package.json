@@ -6,10 +6,14 @@
 		"start": "webpack serve --config config/webpack.dev.js --mode development",
 		"build": "webpack --config config/webpack.prod.js --mode production",
 		"lint": "eslint src",
+		"lint:all": "eslint .",
 		"lint:fix": "eslint src --fix",
-		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-		"postcss": "postcss src/index.styles.scss -o dist/css/styles.css --config postcss.config.js",
-		"watch:postcss": "postcss src/index.styles.scss -o dist/css/styles.css --watch --no-map"
+		"format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+		"postcss:build": "postcss src/index.styles.scss -o dist/app/css/styles.css --config postcss.config.js",
+		"postcss:watch": "postcss src/index.styles.scss -o dist/app/css/styles.css --watch --no-map",
+		"pre-commit:lint": "npm run lint:fix",
+		"pre-commit:format": "npm run format",
+		"pre-commit:postcss": "npm run postcss:build"
 	},
 	"husky": {
 		"hooks": {
