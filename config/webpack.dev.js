@@ -11,7 +11,7 @@ module.exports = merge(common, {
 			directory: path.join(__dirname, '../src'),
 		},
 		hot: true,
-		port: 9000,
+		port: 8080,
 		watchFiles: [path.join(__dirname, '../src/**/*')],
 		open: 'index.html',
 	},
