@@ -12,7 +12,8 @@ This is a starter kit for building web applications using Webpack, Babel, ESLint
   ### Install boilerplate
 
     git clone https://github.com/AndreyShyshkin/Boilerplate.git
-    cd your-project
+    cd Boilerplate
+    git checkout Basic-boilerplate
     pnpm install
 
 ## Usage
