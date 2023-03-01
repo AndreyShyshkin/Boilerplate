@@ -10,6 +10,7 @@ module.exports = merge(common, {
 		static: {
 			directory: path.join(__dirname, '../src'),
 		},
+		allowedHosts: "all",
 		hot: true,
 		port: 8080,
 		watchFiles: [path.join(__dirname, '../src/**/*')],
